@@ -2,9 +2,10 @@ import fastify from 'fastify';
 import fastifyStatic from '@fastify/static';
 import { join } from 'path';
 import * as url from 'url';
-import { TemplateResult, html } from 'lit-html';
+import { html } from 'lit-html';
 import { render } from '@lit-labs/ssr';
 import { collectResult } from '@lit-labs/ssr/lib/render-result.js';
+import './rick-morty-component.js';
 
 const __dirname = url.fileURLToPath(new URL('.', import.meta.url));
 const app = fastify();
@@ -15,14 +16,6 @@ app.register(fastifyStatic, {
     index: false,
     list: true,
 });
-
-/*
-const getRenderString = (data: TemplateResult) => {
-    const { strings, values } = data;
-    const v = [...values, ''];
-    return strings.reduce((acc, s, i) => acc + s + v[i], '');
-};
-*/
 
 const template = (content: unknown) => `<html lang="en">
     <head>
