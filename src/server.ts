@@ -1,9 +1,10 @@
-import { html } from 'lit';
 import fastify from 'fastify';
 import fastifyStatic from '@fastify/static';
 import { join } from 'path';
 import * as url from 'url';
-import { TemplateResult } from 'lit-html';
+import { TemplateResult, html } from 'lit-html';
+import { render } from '@lit-labs/ssr';
+import { collectResult } from '@lit-labs/ssr/lib/render-result.js';
 
 const __dirname = url.fileURLToPath(new URL('.', import.meta.url));
 const app = fastify();
@@ -15,13 +16,15 @@ app.register(fastifyStatic, {
     list: true,
 });
 
+/*
 const getRenderString = (data: TemplateResult) => {
     const { strings, values } = data;
     const v = [...values, ''];
     return strings.reduce((acc, s, i) => acc + s + v[i], '');
 };
+*/
 
-const template = (content: unknown) => html` <html lang="en">
+const template = (content: unknown) => `<html lang="en">
     <head>
         <title>Rick And Morty Web Component</title>
     </head>
@@ -32,10 +35,14 @@ const template = (content: unknown) => html` <html lang="en">
     </body>
 </html>`;
 
-app.get('/', (request, reply) => {
+app.get('/', async (request, reply) => {
     reply
         .type('text/html')
-        .send(getRenderString(template(`<rick-morty></rick-morty>`)));
+        .send(
+            template(
+                await collectResult(render(html`<rick-morty></rick-morty>`)),
+            ),
+        );
 });
 
 app.listen({ port: 3000 }, (err, address) => {

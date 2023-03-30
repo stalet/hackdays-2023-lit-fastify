@@ -13,9 +13,9 @@ let RickMortyComponent = class RickMortyComponent extends LitElement {
     }
     render() {
         return html `
-      <h1>Hello, world!</h1>
-      <p>This is a web component with Lit inside. ${this.version}</p>
-    `;
+            <h1>Hello, world!</h1>
+            <p>This is a web component with Lit inside. ${this.version}</p>
+        `;
     }
 };
 __decorate([
