@@ -22,9 +22,10 @@ export default [
                 },
             }),
         ],
-        input: 'src/rick-morty-component.ts',
+        input: 'src/hydrate.ts',
         output: [
             {
+                inlineDynamicImports: true,
                 sourcemap: true,
                 format: 'esm',
                 file: 'eik/esm.js',

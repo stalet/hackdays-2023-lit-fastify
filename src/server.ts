@@ -2,10 +2,9 @@ import fastify from 'fastify';
 import fastifyStatic from '@fastify/static';
 import { join } from 'path';
 import * as url from 'url';
-import { html } from 'lit-html';
 import { render } from '@lit-labs/ssr';
 import { collectResult } from '@lit-labs/ssr/lib/render-result.js';
-import './rick-morty-component.js';
+import rickMortyTemplate from './rick-morty-template.js';
 
 const __dirname = url.fileURLToPath(new URL('.', import.meta.url));
 const app = fastify();
@@ -17,7 +16,12 @@ app.register(fastifyStatic, {
     list: true,
 });
 
-const template = (content: unknown) => `<html lang="en">
+const initialData = {
+    text: 'Inside Shadow DOM',
+};
+
+/*
+const template = (content: unknown) => html`<html lang="en">
     <head>
         <title>Rick And Morty Web Component</title>
     </head>
@@ -27,15 +31,12 @@ const template = (content: unknown) => `<html lang="en">
         <script type="module" src="/public/esm.js"></script>
     </body>
 </html>`;
+*/
 
 app.get('/', async (request, reply) => {
     reply
         .type('text/html')
-        .send(
-            template(
-                await collectResult(render(html`<rick-morty></rick-morty>`)),
-            ),
-        );
+        .send(await collectResult(render(rickMortyTemplate(initialData))));
 });
 
 app.listen({ port: 3000 }, (err, address) => {
