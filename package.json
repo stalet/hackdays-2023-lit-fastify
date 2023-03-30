@@ -1,0 +1,43 @@
+{
+  "name": "hackdays-2023-lit-fastify",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/server.js",
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "postbuild": "npm run build:js",
+    "prebuild:js": "rimraf eik",
+    "build:js": "rollup -c",
+    "prestart": "npm run build",
+    "start": "node .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@fastify/static": "6.9.0",
+    "@types/react": "18.0.31",
+    "@types/react-dom": "18.0.11",
+    "fastify": "4.15.0",
+    "fastify-plugin": "4.5.0",
+    "lit": "2.7.0",
+    "lit-html": "2.7.0",
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "24.0.1",
+    "@rollup/plugin-node-resolve": "15.0.1",
+    "@rollup/plugin-replace": "5.0.2",
+    "@rollup/plugin-terser": "0.4.0",
+    "@rollup/plugin-typescript": "11.0.0",
+    "@tsconfig/node18": "1.0.1",
+    "@types/node": "18.15.11",
+    "rimraf": "4.4.1",
+    "rollup": "3.20.2",
+    "tslib": "2.5.0",
+    "typescript": "5.0.2"
+  }
+}
