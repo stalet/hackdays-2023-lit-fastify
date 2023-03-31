@@ -1,9 +1,2 @@
-import {
-    hasNativeDeclarativeShadowRoots,
-    hydrateShadowRoots,
-} from '@webcomponents/template-shadowroot/template-shadowroot.js';
-
-if (!hasNativeDeclarativeShadowRoots()) {
-    hydrateShadowRoots(document.body);
-}
+import 'lit/experimental-hydrate-support.js';
 import('./rick-morty-component.js');

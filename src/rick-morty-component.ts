@@ -13,6 +13,7 @@ export class RickMortyComponent extends LitElement {
     text = 'foo';
 
     render() {
+        console.log('render ric-morty');
         return html`
             <h1>Hello, world!</h1>
             <slot></slot>
