@@ -1,4 +1,4 @@
-import { LitElement, html } from 'lit';
+import { LitElement, html, isServer } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
 
 @customElement('rick-morty')
@@ -13,7 +13,7 @@ export class RickMortyComponent extends LitElement {
     text = 'foo';
 
     render() {
-        console.log('render ric-morty');
+        !isServer && console.log('render ric-morty');
         return html`
             <h1>Hello, world!</h1>
             <slot></slot>
