@@ -51,6 +51,6 @@
     "rollup": "3.20.2",
     "tsc-watch": "6.0.0",
     "tslib": "2.5.0",
-    "typescript": "5.0.2"
+    "typescript": "5.0.4"
   }
 }
