@@ -34,9 +34,16 @@ const template = (content: unknown) => html`<html lang="en">
 */
 
 app.get('/', async (request, reply) => {
-    reply
-        .type('text/html')
-        .send(await collectResult(render(rickMortyTemplate(initialData))));
+    reply.type('text/html').send(`<html lang="en">
+        <head>
+            <title>Rick And Morty Web Component</title>
+        </head>
+        <body>
+            <h1>Rick and morty web component!</h1>
+            ${await collectResult(render(rickMortyTemplate(initialData)))}
+            <script type="module" src="/public/esm.js" crossorigin defer></script>
+        </body>
+    </html>`);
 });
 
 app.listen({ port: 3000 }, (err, address) => {
@@ -45,3 +52,4 @@ app.listen({ port: 3000 }, (err, address) => {
         process.exit(1);
     }
 });
+console.log('Application ready: http://localhost:3000/');
