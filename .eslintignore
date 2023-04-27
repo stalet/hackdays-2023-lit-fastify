@@ -1,3 +1,4 @@
 dist
 eik
 node_modules
+src/polyfill.js

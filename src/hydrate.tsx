@@ -1,3 +1,4 @@
+import './polyfill.js';
 import 'lit/experimental-hydrate-support.js';
 import('./rick-morty-component.js');
 import React from 'react';
