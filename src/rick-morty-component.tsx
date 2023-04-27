@@ -1,4 +1,4 @@
-import { LitElement, html, isServer } from 'lit';
+import { LitElement, html, isServer, css } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
 import { renderToString } from 'react-dom/server';
 import React from 'react';
@@ -10,6 +10,13 @@ export class RickMortyComponent extends LitElement {
     static shadowRootOptions = {
         ...LitElement.shadowRootOptions,
     };
+
+    static styles = css`
+        p {
+            color: green;
+        }
+    `;
+
     @property()
     version = 'STARTING';
 

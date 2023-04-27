@@ -20,19 +20,6 @@ const initialData = {
     text: 'Inside Shadow DOM',
 };
 
-/*
-const template = (content: unknown) => html`<html lang="en">
-    <head>
-        <title>Rick And Morty Web Component</title>
-    </head>
-    <body>
-        <h1>Rick and morty web component!</h1>
-        ${content}
-        <script type="module" src="/public/esm.js"></script>
-    </body>
-</html>`;
-*/
-
 app.get('/', async (request, reply) => {
     reply.type('text/html').send(`<html lang="en">
         <head>
@@ -40,8 +27,10 @@ app.get('/', async (request, reply) => {
         </head>
         <body>
             <h1>Rick and morty web component!</h1>
+            <p>Paragraph outside lit</p>
             ${await collectResult(render(rickMortyTemplate(initialData)))}
             <script type="module" src="/public/esm.js" crossorigin defer></script>
+            <p>Paragraph outside lit</p>
         </body>
     </html>`);
 });
