@@ -14,7 +14,7 @@ export default [
             typescript({ compilerOptions: { module: 'ES6' } }),
             replace({
                 preventAssignment: true,
-                'process.env.NODE_ENV': JSON.stringify('production'),
+                'process.env.NODE_ENV': JSON.stringify('development'),
             }),
             terser({
                 format: {

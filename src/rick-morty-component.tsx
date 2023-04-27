@@ -20,14 +20,17 @@ export class RickMortyComponent extends LitElement {
     start = 100;
 
     render() {
+        const app = `<div id="app">${renderToString(
+            <App start={this.start} />,
+        )}</div>`;
+        console.log(`app: ${app}`);
+
         !isServer && console.log('render ric-morty');
         return html`
             <h1>Hello, world!</h1>
             <slot></slot>
             <p>This is a web component with Lit inside. ${this.text}</p>
-            <div id="app">
-                ${unsafeHTML(renderToString(<App start={this.start} />))}
-            </div>
+            ${unsafeHTML(app)}
         `;
     }
 }
