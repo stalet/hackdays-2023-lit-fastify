@@ -1,5 +1,9 @@
 import { LitElement, html, isServer } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
+import { renderToString } from 'react-dom/server';
+import React from 'react';
+import App from './App';
+import { unsafeHTML } from 'lit-html/directives/unsafe-html.js';
 
 @customElement('rick-morty')
 export class RickMortyComponent extends LitElement {
@@ -12,12 +16,18 @@ export class RickMortyComponent extends LitElement {
     @property()
     text = 'foo';
 
+    @property()
+    start = 100;
+
     render() {
         !isServer && console.log('render ric-morty');
         return html`
             <h1>Hello, world!</h1>
             <slot></slot>
             <p>This is a web component with Lit inside. ${this.text}</p>
+            <div id="app">
+                ${unsafeHTML(renderToString(<App start={this.start} />))}
+            </div>
         `;
     }
 }

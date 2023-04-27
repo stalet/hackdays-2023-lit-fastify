@@ -22,7 +22,7 @@ export default [
                 },
             }),
         ],
-        input: 'src/hydrate.ts',
+        input: 'src/hydrate.tsx',
         output: [
             {
                 inlineDynamicImports: true,
