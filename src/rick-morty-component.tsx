@@ -12,6 +12,7 @@ export class RickMortyComponent extends LitElement {
     };
 
     static styles = css`
+        @import 'https://assets.finn.no/pkg/@fabric-ds/css/v1/fabric.min.css';
         p {
             color: green;
         }
