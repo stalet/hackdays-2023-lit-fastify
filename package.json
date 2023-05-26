@@ -29,7 +29,7 @@
     "@webcomponents/template-shadowroot": "0.2.1",
     "fastify": "4.17.0",
     "fastify-plugin": "4.5.0",
-    "lit": "2.7.3",
+    "lit": "2.7.4",
     "lit-html": "2.7.4",
     "react": "18.2.0",
     "react-dom": "18.2.0"
