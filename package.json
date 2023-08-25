@@ -27,7 +27,7 @@
     "@types/react": "18.2.21",
     "@types/react-dom": "18.2.7",
     "@webcomponents/template-shadowroot": "0.2.1",
-    "fastify": "4.17.0",
+    "fastify": "4.21.0",
     "fastify-plugin": "4.5.0",
     "lit": "2.7.5",
     "lit-html": "2.7.4",
