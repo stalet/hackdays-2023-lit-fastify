@@ -24,8 +24,8 @@
   "dependencies": {
     "@fastify/static": "6.12.0",
     "@lit-labs/ssr": "3.1.9",
-    "@types/react": "18.2.34",
-    "@types/react-dom": "18.2.14",
+    "@types/react": "18.2.37",
+    "@types/react-dom": "18.2.15",
     "@webcomponents/template-shadowroot": "0.2.1",
     "fastify": "4.24.3",
     "fastify-plugin": "4.5.1",
