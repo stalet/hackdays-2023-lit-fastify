@@ -3,6 +3,7 @@
   "compilerOptions": {
     "rootDir": "./src",
     "target": "ES2020",
+    "moduleResolution": "node",
     "module": "ES2022",
     "outDir": "./dist",
     "strict": true,
