@@ -9,6 +9,10 @@
   },
   "packageRules": [
     {
+      "matchPackageNames": ["@types/node"],
+      "allowedVersions": "18.x"
+    },    
+    {
       "matchPackagePatterns": ["^react"],
       "matchUpdateTypes": ["major"],
       "enabled": false
