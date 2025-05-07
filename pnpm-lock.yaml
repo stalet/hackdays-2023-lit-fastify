@@ -24,8 +24,8 @@ dependencies:
     specifier: 4.26.2
     version: 4.26.2
   fastify-plugin:
-    specifier: 4.5.1
-    version: 4.5.1
+    specifier: 5.0.1
+    version: 5.0.1
   lit:
     specifier: 3.1.2
     version: 3.1.2
@@ -1231,6 +1231,10 @@ packages:
 
   /fastify-plugin@4.5.1:
     resolution: {integrity: sha512-stRHYGeuqpEZTL1Ef0Ovr2ltazUT9g844X5z/zEBFLG8RYlpDiOCIG+ATvYEp+/zmc7sN29mcIMp8gvYplYPIQ==}
+    dev: false
+
+  /fastify-plugin@5.0.1:
+    resolution: {integrity: sha512-HCxs+YnRaWzCl+cWRYFnHmeRFyR5GVnJTAaCJQiYzQSDwK9MgJdyAsuL3nh0EWRCYMgQ5MeziymvmAhUHYHDUQ==}
     dev: false
 
   /fastify@4.26.2:
