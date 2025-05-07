@@ -53,8 +53,8 @@ devDependencies:
     specifier: 0.4.4
     version: 0.4.4(rollup@4.9.6)
   '@rollup/plugin-typescript':
-    specifier: 11.1.6
-    version: 11.1.6(rollup@4.9.6)(tslib@2.6.2)(typescript@5.3.3)
+    specifier: 12.1.2
+    version: 12.1.2(rollup@4.9.6)(tslib@2.6.2)(typescript@5.3.3)
   '@tsconfig/node18':
     specifier: 18.2.4
     version: 18.2.4
@@ -400,8 +400,8 @@ packages:
       terser: 5.17.6
     dev: true
 
-  /@rollup/plugin-typescript@11.1.6(rollup@4.9.6)(tslib@2.6.2)(typescript@5.3.3):
-    resolution: {integrity: sha512-R92yOmIACgYdJ7dJ97p4K69I8gg6IEHt8M7dUBxN3W6nrO8uUxX5ixl0yU/N3aZTi8WhPuICvOHXQvF6FaykAA==}
+  /@rollup/plugin-typescript@12.1.2(rollup@4.9.6)(tslib@2.6.2)(typescript@5.3.3):
+    resolution: {integrity: sha512-cdtSp154H5sv637uMr1a8OTWB0L1SWDSm1rDGiyfcGcvQ6cuTs4MDk2BVEBGysUWago4OJN4EQZqOTl/QY3Jgg==}
     engines: {node: '>=14.0.0'}
     peerDependencies:
       rollup: ^2.14.0||^3.0.0||^4.0.0

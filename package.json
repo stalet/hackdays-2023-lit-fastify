@@ -40,7 +40,7 @@
     "@rollup/plugin-node-resolve": "15.3.1",
     "@rollup/plugin-replace": "5.0.5",
     "@rollup/plugin-terser": "0.4.4",
-    "@rollup/plugin-typescript": "11.1.6",
+    "@rollup/plugin-typescript": "12.1.2",
     "@tsconfig/node18": "18.2.4",
     "@types/node": "18.19.29",
     "@typescript-eslint/eslint-plugin": "6.18.0",
